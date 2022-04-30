@@ -1,0 +1,29 @@
+{
+	"name": "JS YandexRadio",
+	"version": "0.1",
+	"manifest_version": 3,
+	"content_scripts":
+		[
+			{
+				"matches":
+					[
+						"https://radio.yandex.ru/*"
+					],
+				"js":
+					[
+						"01_autoplay.js"
+					],
+				"run_at": "document_end"
+			}
+		],
+	"action":
+		{
+			"default_icon": "icon.png",
+			"default_popup": "popup.html"
+		},
+	"permissions":
+		[
+			"tabs",
+			"storage"
+		]
+}
