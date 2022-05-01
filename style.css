@@ -1,0 +1,26 @@
+.autoplay{
+	background-image:url(chrome-extension://__MSG_@@extension_id__/autoplay.svg) !important;
+	display:inline-block !important;
+	vertical-align:middle;
+	line-height:0;
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	opacity:.4;
+	transition:opacity .15s ease-out;
+	margin:8px;
+	width:22px !important;
+	height:22px !important;
+}
+.autoplay_hidden{
+	display:none
+}
+.autoplay:hover,.autoplay_enabled{
+	opacity:1
+}
+.autoplay_disabled,.autoplay_disabled:hover{
+	opacity:.4;
+	cursor:default
+}
