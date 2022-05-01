@@ -36,8 +36,8 @@ if (window.location.toString().match(/https\:\/\/radio.yandex.ru/ig)) {
 			is_auto = '0'
 		}
 		
-	chrome.storage.sync.set({key: is_auto}, function() {
-	});
+		chrome.storage.sync.set({key: is_auto}, function() {
+		});
 
 	}
 
