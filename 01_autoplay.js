@@ -1,12 +1,11 @@
 if (window.location.toString().match(/https\:\/\/radio.yandex.ru/ig)) {
 
 	chrome.storage.sync.get(['key'], function(result) {
-		if (result.key == '1') {
-			document.querySelector('.autoplay').className = 'icon autoplay autoplay_enabled'
-		} else if (result.key == '0') {
+		if (result.key == '0') {
 			document.querySelector('.autoplay').className = 'icon autoplay'
 		} else {
-			window.onload = autoplay_checking
+			document.querySelector('.autoplay').className = 'icon autoplay autoplay_enabled';
+			autoplay_enabled = setInterval(change_track, 1000);
 		}
 	})
 
